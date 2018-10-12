@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Work item info field</title>
+    <!-- VSS Framework --> 
+	<script src="lib/VSS.SDK.min.js"></script> 
+    <style>
+        .work-info-item-field, .work-info-item-field {
+            margin: 20px;
+        }
+    </style>
+	<script type="text/javascript">
+        VSS.init({
+			explicitNotifyLoaded: true,
+			usePlatformScripts: true
+		});
+        VSS.ready(function() {
+			var x = VSS.getConfiguration().witInputs["InfoText"];
+			var y = VSS.getConfiguration().witInputs["InfoLinkUrl"];
+			var z = VSS.getConfiguration().witInputs["InfoLinkTitle"];
+            
+			if (x !== undefined && x.length > 0) { 
+				document.getElementById("work-info-item-field").innerText = x; 
+			}
+			if (y !== undefined && z !== undefined && y.length > 0 && z.length > 0) {
+				document.getElementById("infolink").href = y;
+				document.getElementById("infolink").text = z;
+			}
+			VSS.register(VSS.getContribution().id, function (context) {
+				return {};
+			});
+			VSS.notifyLoadSucceeded();			
+        });
+
+    </script>
+</head>
+<body>
+    <span id="work-info-item-field"></span>
+	<a id="infolink" href="" target="_blank"></a>
+</body>
+</html>

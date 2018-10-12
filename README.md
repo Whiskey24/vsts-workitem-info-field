@@ -1,0 +1,1 @@
+Simple extension for VSTS / Azure DevOps Services that shows a field with text and/or hyperlink on the workitem page
