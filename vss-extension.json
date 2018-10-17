@@ -2,7 +2,7 @@
     "manifestVersion": 1,
     "id": "workitem-info-field",
     "publisher": "BertSantema",
-    "version": "1.0.16",
+    "version": "1.0.17",
     "name": "Work item info field",
     "description": "Adds a read-only information field, e.g. to display instructions",
     "icons": {
@@ -26,7 +26,6 @@
 			"properties": {
 				"name": "Information field",
 				"uri": "workitem-info-field.html",
-				"height": 90,
 				"inputs": [
                     {
                         "id": "InfoText",

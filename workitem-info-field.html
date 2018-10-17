@@ -26,9 +26,13 @@
 				document.getElementById("infolink").href = y;
 				document.getElementById("infolink").text = z;
 			}
+			
+			VSS.resize();
+			
 			VSS.register(VSS.getContribution().id, function (context) {
 				return {};
 			});
+
 			VSS.notifyLoadSucceeded();			
         });
 
